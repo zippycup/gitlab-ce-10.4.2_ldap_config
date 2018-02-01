@@ -4,7 +4,7 @@
 
 Understand to correctly configuration gitlab Community Edition for use with OpenLDAP.
 
-## Issue 1
+## Issue 1 /var/log/gitlab/sidekiq/current
 ```
 ---- Begin output of /opt/gitlab/bin/gitlab-rake cache:clear ----
 STDOUT:
@@ -16,7 +16,7 @@ Tasks: TOP => cache:clear => environment
 ```
 This is caused by community addition only supporting the main: ldap server only
 
-## Issue 2
+## Issue 2 /var/log/gitlab/gitlab-rails/production.log
 ```
 Started POST "/users/auth/ldapmain/callback" for 10.27.52.101 at 2018-02-01 10:47:00 -0500
 
@@ -34,7 +34,7 @@ LDAP search error: No Such Object
 ```
 This is caused by not setting the ldap base
 
-## Working example
+## Working example /etc/gitlab/gitlab.rb
 ```
 gitlab_rails['ldap_enabled'] = true
 
