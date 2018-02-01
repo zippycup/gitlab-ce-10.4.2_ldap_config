@@ -14,7 +14,7 @@ Tasks: TOP => cache:clear => environment
 (See full trace by running task with --trace)
 ---- End output of /opt/gitlab/bin/gitlab-rake cache:clear ----
 ```
-This is caused by Community Eddition only supporting the main: ldap server.
+This is caused by Community Edition only supporting the main: ldap server.
 
 ## Issue 2 /var/log/gitlab/gitlab-rails/production.log
 ```
